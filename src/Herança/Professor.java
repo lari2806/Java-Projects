@@ -1,12 +1,12 @@
 package src.Herança;
 public class Professor extends Aluno{
-    private int anoformação;
-    public Professor(String Nome, int Nascimento, String Curso, int Matricula, int anoformação){   
-        super(Nome, Nascimento, Curso, Matricula); 
-        this.anoformação = anoformação; 
+    private int anoFormacao;
+    public Professor(String nome, int nascimento, String curso, int Matricula, int anoFormacao){   
+        super(nome, nascimento, curso, Matricula); 
+        this.anoFormacao = anoFormacao; 
       }
       public String  Saudação(){  
-        String Teacher = super.Saudação();
-        return Teacher + " tenho " + this.anoformação + " anos de formação";
+        String professor = super.Saudação();
+        return professor + " tenho " + this.anoFormacao + " anos de formação";
 }
 }
