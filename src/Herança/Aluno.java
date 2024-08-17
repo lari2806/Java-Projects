@@ -1,17 +1,17 @@
 package src.Herança;
 
 public class Aluno extends Pessoa{
-    private String Curso;
-    private int Matricula;
+    private String curso;
+    private int matricula;
     
-    public Aluno(String Nome, int Nascimento, String Curso, int Matricula){
-    super(Nome,Nascimento);
-    this.Matricula = Matricula;
-    this.Curso = Curso;
+    public Aluno(String Nome, int nascimento, String curso, int matricula){
+    super(Nome,nascimento);
+    this.matricula = matricula;
+    this.curso = curso;
 }
 
     @Override
 public String Saudação(){
-    String Student = super.Saudação();
-    return Student + "minha matricula é "+ this.Matricula +" e estou no curso de " + this.Curso; 
+    String aluno = super.Saudação();
+    return aluno + "minha matricula é "+ this.matricula +" e estou no curso de " + this.curso; 
 }}
