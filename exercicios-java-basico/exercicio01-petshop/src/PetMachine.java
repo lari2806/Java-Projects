@@ -6,22 +6,22 @@ public class PetMachine {
     
     private int shampoo = 10;
     
-    private Pet animal;
+    private Pet pet;
 
 
 
 
-    public void banhoAnimal(){
-        if(this.animal == null){
-            System.out.println("Coloque o animal na máquina para iniciar o banho.");
+    public void banhopet(){
+        if(this.pet == null){
+            System.out.println("Coloque o pet na máquina para iniciar o banho.");
             return;
         }
 
         this.agua -= 10;
         this.shampoo -= 2;
 
-        animal.setLimpo(true);
-            System.out.println("O animal " + animal.getNome() + " está limpo!");
+        pet.setLimpo(true);
+            System.out.println("O pet " + pet.getNome() + " está limpo!");
     }
 
     public void adicionarAgua(){
@@ -52,27 +52,30 @@ public class PetMachine {
         }
     }
 
-    public boolean petBanho(){
-        return animal != null;
+    public boolean VerificarSeTemPet(){
+        return pet != null;
     }
 
-    public void setAnimal(Pet animal) {
+    public void setpet(Pet pet) {
         if(this.limpo){
-            System.out.println("A máquina está suja, para colocar outro animal é necessário limpa-la");
+            System.out.println("A máquina está suja, para colocar outro pet é necessário limpa-la");
+            
         }
-        if(petBanho()){
-            System.out.println("O pet " + this.animal.getNome() + "Está na máquina de banho neste momento.");
+        if(VerificarSeTemPet()){
+            System.out.println("O pet " + this.pet.getNome() + "Está na máquina de banho neste momento.");
+            return;
         }
 
-        this.animal = animal;
+        this.pet = pet;
+
     }
 
-    public void removerAnimal(){
-        this.limpo = this.animal.isLimpo();
+    public void removerpet(){
+        this.limpo = this.pet.isLimpo();
 
-        System.out.println("O pet" + this.animal.getNome() + " está limpo.");
+        System.out.println("O pet" + this.pet.getNome() + " está limpo.");
 
-        this.animal= null;
+        this.pet= null;
     }
 
     public void limparMaquina(){
